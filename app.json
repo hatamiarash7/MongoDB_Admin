@@ -1,0 +1,30 @@
+{
+  "name": "MongoDB_Admin",
+  "description": "A Web GUI to administer MongoDB",
+  "repository": "https://github.com/hatamiarash7/MongoDB_Admin",
+  "logo": "https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/adminMongo/adminMongo-Logo.png",
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "admin",
+    "web",
+    "ui",
+    "UI",
+    "gui",
+    "GUI",
+    "DB",
+    "database",
+    "user",
+    "manage",
+    "manager",
+    "administer",
+    "interface",
+    "document",
+    "collection",
+    "express",
+    "electron",
+    "open source",
+    "mongo-admin",
+    "mongoadmin"
+  ]
+}
