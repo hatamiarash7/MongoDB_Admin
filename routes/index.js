@@ -9,19 +9,21 @@ var common = require('./common');
 
 // runs on all routes and checks password if one is setup
 router.all('/*', common.checkLogin, function (req, res, next){
-    res.locals.isLogin = !!req.session.loggedIn;
+    if(req.nconf.app.get('app') && req.nconf.app.get('app').hasOwnProperty('password')){
+        res.locals.isLogin = !!req.session.loggedIn;
+    }else{
+        res.locals.isLogin = true;
+    }
     next();
 });
 
 // redirect to "/app" on home route
 router.all('/', common.checkLogin, function (req, res, next){
-    res.locals.isLogin = !!req.session.loggedIn;
     res.redirect(req.app_context + '/app/');
 });
 
 // runs on all routes and checks password if one is setup
 router.all('/app/*', common.checkLogin, function (req, res, next){
-    res.locals.isLogin = !!req.session.loggedIn;
     next();
 });
 
@@ -33,13 +35,11 @@ router.get('/app/', function (req, res, next){
         if(Object.keys(connection_list).length > 0){
             // we have a connection and redirect to the first
             var first_conn = Object.keys(connection_list)[0];
-            res.locals.isLogin = !!req.session.loggedIn;
             res.redirect(req.app_context + '/app/' + first_conn);
             return;
         }
     }
     // if no connections, go to connection setup
-    res.locals.isLogin = !!req.session.loggedIn;
     res.redirect(req.app_context + '/app/connection_list');
     return;
 });
@@ -52,8 +52,7 @@ router.get('/app/login', function (req, res, next){
     if(passwordConf && passwordConf.hasOwnProperty('password')){
         res.render('login', {
             message: '',
-            helpers: req.handlebars.helpers,
-            isLogin: !!req.session.loggedIn
+            helpers: req.handlebars.helpers
         });
     }else{
         res.redirect(req.app_context + '/');
@@ -79,8 +78,7 @@ router.post('/app/login_action', function (req, res, next){
             // password is wrong. Show login form with a message
             res.render('login', {
                 message: 'Password is incorrect',
-                helpers: req.handlebars.helpers,
-                isLogin: !!req.session.loggedIn
+                helpers: req.handlebars.helpers
             });
         }
     }else{
@@ -96,8 +94,7 @@ router.get('/app/connection_list', function (req, res, next){
         message: '',
         editor: true,
         connection_list: common.order_object(connection_list),
-        helpers: req.handlebars.helpers,
-        isLogin: !!req.session.loggedIn
+        helpers: req.handlebars.helpers
     });
 });
 
@@ -114,8 +111,7 @@ router.get('/app/monitoring/:conn/', function (req, res, next){
         message: monitoringMessage,
         monitoring: monitoringRequired,
         conn_name: req.params.conn,
-        helpers: req.handlebars.helpers,
-        isLogin: !!req.session.loggedIn
+        helpers: req.handlebars.helpers
     });
 });
 
