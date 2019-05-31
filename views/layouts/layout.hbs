@@ -83,7 +83,11 @@
 		{{#ifOr monitoring connection_list}}
 		<div class="col-md-12 col-lg-12" id="main">
 		{{else}}
-		<div class="column col-xs-12 col-sm-9 col-lg-10" id="main">
+			{{#if isLogin}}
+			<div class="column col-xs-12 col-sm-9 col-lg-10" id="main">
+			{{else}}
+			<div class="column col-xs-12 col-sm-12 col-lg-12" id="main">
+			{{/if}}
 		{{/ifOr}}
 		<nav class="navbar navbar-default navbar-static-top">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -269,7 +273,8 @@
 		</div>
 		<!-- Export collection Modal -->
 	</div>
-	<div id="notify_message"></div>
+		<div id="notify_message"></div>
+	</div>
 </div>
 </body>
 </html>
