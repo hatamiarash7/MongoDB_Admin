@@ -9,8 +9,6 @@ var session = require('express-session');
 var async = require('async');
 var moment = require('moment');
 var fs = require('fs');
-var winston = require('winston');
-var expressWinston = require('express-winston');
 
 // Define routes
 var indexRoute = require('./routes/index');
@@ -196,16 +194,6 @@ app.use(app_context + '/fonts', express.static(path.join(dir_base, 'public/fonts
 app.use(app_context + '/js', express.static(path.join(dir_base, 'public/js')));
 app.use(app_context + '/favicon.ico', express.static(path.join(dir_base, 'public/favicon-32x32.png')));
 
-app.use(expressWinston.logger({
-    transports: [
-        new winston.transports.Console()
-    ],
-    format: winston.format.combine(
-        winston.format.colorize(),
-        winston.format.json()
-    )
-}));
-
 // Make stuff accessible to our router
 app.use(function (req, res, next){
     req.nconf = nconf.stores;
@@ -234,16 +222,6 @@ if(app_context !== ''){
     app.use('/', collectionRoute);
     app.use('/', indexRoute);
 }
-
-app.use(expressWinston.errorLogger({
-    transports: [
-        new winston.transports.Console()
-    ],
-    format: winston.format.combine(
-        winston.format.colorize(),
-        winston.format.json()
-    )
-}));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next){
