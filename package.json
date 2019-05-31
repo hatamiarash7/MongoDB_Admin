@@ -18,7 +18,10 @@
     "packageOsx": "electron-packager ./ MongoDB_Admin --out=releases/ --platform=darwin --arch=x64 --prune --overwrite --ignore=releases/* --icon=public/logo.icns",
     "packageWin32": "electron-packager ./ MongoDB_Admin --out=releases/ --platform=win32 --arch=ia32 --prune --overwrite --ignore=releases/* --icon=public/logo.ico",
     "packageWin64": "electron-packager ./ MongoDB_Admin --out=releases/ --platform=win32 --arch=x64 --prune --overwrite --ignore=releases/* --icon=public/logo.ico",
-    "packageLinux": "electron-packager ./ MongoDB_Admin --out=releases/ --platform=linux --arch=ia32 --prune --overwrite --ignore=releases/* --icon=public/logo.ico"
+    "packageLinux": "electron-packager ./ MongoDB_Admin --out=releases/ --platform=linux --arch=ia32 --prune --overwrite --ignore=releases/* --icon=public/logo.ico",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build"
   },
   "keywords": [
     "mongo",
@@ -53,7 +56,6 @@
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.14.0",
-    "express-winston": "^3.1.0",
     "font-awesome": "^4.6.3",
     "hbs": "^4.0.0",
     "i18n-2": "^0.6.3",
@@ -72,8 +74,7 @@
     "nedb": "^1.8.0",
     "node-delete": "^0.1.2",
     "require.js": "^1.0.0",
-    "serve-favicon": "~2.4.3",
-    "winston": "^3.2.1"
+    "serve-favicon": "~2.4.3"
   },
   "license": "MIT",
   "devDependencies": {
