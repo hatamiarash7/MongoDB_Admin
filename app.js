@@ -224,7 +224,7 @@ if(app_context !== ''){
     app.use('/', docRoute);
     app.use('/', dbRoute);
     app.use('/', collectionRoute);
-    // app.use('/', indexRoute);
+    app.use('/', indexRoute);
 }
 
 // catch 404 and forward to error handler
