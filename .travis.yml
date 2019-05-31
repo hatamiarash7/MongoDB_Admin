@@ -1,8 +1,10 @@
 language: node_js
+sudo: true
 services:
   - mongodb
 node_js:
-  - "4.0.0"
-  - "4.4.5"
-  - "5.4.1"
-  - "6.2"
+  - 10
+  - 9
+  - 8
+  - 7
+  - 6
