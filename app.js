@@ -17,7 +17,6 @@ var fs = require('fs');
 // Define routes
 var indexRoute = require('./routes/index');
 var apiRoute = require('./routes/api');
-var usersRoute = require('./routes/users');
 var configRoute = require('./routes/config');
 var docRoute = require('./routes/document');
 var dbRoute = require('./routes/database');
@@ -211,7 +210,6 @@ app.use(function (req, res, next){
 // add context to route if required
 if(app_context !== ''){
     app.use(app_context, apiRoute);
-    app.use(app_context, usersRoute);
     app.use(app_context, configRoute);
     app.use(app_context, docRoute);
     app.use(app_context, dbRoute);
@@ -219,7 +217,6 @@ if(app_context !== ''){
     app.use(app_context, indexRoute);
 }else{
     app.use('/', apiRoute);
-    app.use('/', usersRoute);
     app.use('/', configRoute);
     app.use('/', docRoute);
     app.use('/', dbRoute);
