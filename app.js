@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -220,7 +224,7 @@ if(app_context !== ''){
     app.use('/', docRoute);
     app.use('/', dbRoute);
     app.use('/', collectionRoute);
-    app.use('/', indexRoute);
+    // app.use('/', indexRoute);
 }
 
 // catch 404 and forward to error handler

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 $(document).ready(function (){
     var editor = ace.edit('json');
     editor.setTheme('ace/theme/github');

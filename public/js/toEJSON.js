@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 var toEJSON = (function (){
     var serialize_BinData = function (bsonString){
         var bson_full = bsonString.match(/(BinData\s?\([^)]+\))/g);

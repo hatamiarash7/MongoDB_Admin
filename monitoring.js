@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 var _ = require('lodash');
 
 // Removes old monitoring data. We only want basic monitoring with the last 100 events.

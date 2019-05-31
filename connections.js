@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 var MongoClient = require('mongodb').MongoClient;
 
 exports.addConnection = function (connection, app, callback){

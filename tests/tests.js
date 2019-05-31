@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 /* global it, describe, toEJSON */
 
 var request = require('supertest');

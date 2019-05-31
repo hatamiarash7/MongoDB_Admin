@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 var express = require('express');
 var router = express.Router();
 var common = require('./common');

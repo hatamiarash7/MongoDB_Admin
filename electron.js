@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 const electron = require('electron');
 // Module to control application life.
 const app = electron.app;

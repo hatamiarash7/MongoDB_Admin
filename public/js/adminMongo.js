@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 $(document).ready(function (){
     // paginate if value is set
     if($('#to_paginate').val() === 'true'){

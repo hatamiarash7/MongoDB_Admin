@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
 // Basically ripped from https://github.com/douglascrockford/JSON-js/blob/master/json2.js but added BSON support
 
 'use strict';
