@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2019. Arash Hatami
- */
-
 {
 	"Connections": "Connections",
 	"Database": "Database",
