@@ -192,7 +192,7 @@ app.use(app_context + '/bootstrap', express.static(path.join(dir_base, 'node_mod
 app.use(app_context + '/css', express.static(path.join(dir_base, 'public/css')));
 app.use(app_context + '/fonts', express.static(path.join(dir_base, 'public/fonts')));
 app.use(app_context + '/js', express.static(path.join(dir_base, 'public/js')));
-app.use(app_context + '/favicon.ico', express.static(path.join(dir_base, 'public/favicon.ico')));
+app.use(app_context + '/favicon.ico', express.static(path.join(dir_base, 'public/favicon-32x32.png')));
 
 // Make stuff accessible to our router
 app.use(function (req, res, next){
