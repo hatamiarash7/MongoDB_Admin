@@ -7,7 +7,7 @@ MongoDB Admin is a cross platform user interface ( GUI ) to handle all your Mong
 ![banner](/markdown/Github_Banner.jpg)  
   
 You can use this DBMS in web or a local application ( Electron ).    
-Read [wiki](https://github.com/hatamiarash7/MongoDB_Admin/wiki/1.-Getting-Start) to install and configuration
+Read [wiki](https://github.com/hatamiarash7/MongoDB_Admin/wiki/1.-Getting-Start) for install and configuration
 
 [1 . Getting Start](https://github.com/hatamiarash7/MongoDB_Admin/wiki/1.-Getting-Start)  
 [2 . Configuration](https://github.com/hatamiarash7/MongoDB_Admin/wiki/2.-Configuration)  
