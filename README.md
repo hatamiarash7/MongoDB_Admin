@@ -16,3 +16,15 @@ Read [wiki](https://github.com/hatamiarash7/MongoDB_Admin/wiki/1.-Getting-Start)
 ## Support
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D1WGU9)
+
+## Contributing
+
+1. Fork it!  
+2. Create your feature branch : `git checkout -b my-new-feature`  
+3. Commit your changes : `git commit -am 'Add some feature'`    
+4. Push to the branch : `git push origin my-new-feature`  
+5. Submit a pull request :D  
+
+## Issues
+
+Each project may have many problems. Contributing to the better development of this project by reporting them
