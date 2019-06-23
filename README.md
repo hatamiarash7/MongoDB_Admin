@@ -30,6 +30,5 @@ Read [wiki](https://github.com/hatamiarash7/MongoDB_Admin/wiki/1.-Getting-Start)
 
 Each project may have many problems. Contributing to the better development of this project by reporting them
 
-
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhatamiarash7%2FMongoDB_Admin.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhatamiarash7%2FMongoDB_Admin?ref=badge_large)
